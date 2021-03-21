@@ -3,10 +3,10 @@ const cors = require('cors')
 const express = require('express')
 const app = express()
 const serve = require('http').Server(app)
-var host = window.location.host
+
 const io = require('socket.io')(serve, {
     cors: {
-      origin: host,//"http://localhost:4037"
+      origin: 'https://speakup-heroku.herokuapp.com',
       methods: ["GET", "POST"]
     }
   })
