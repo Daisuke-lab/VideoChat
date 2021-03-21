@@ -2,7 +2,7 @@ const port = 5000;
 const cors = require('cors')
 const express = require('express')
 const app = express()
-const serve = require('http').Server(app)
+const serve = require('https').Server(app)
 
 const io = require('socket.io')(serve, {
     cors: {
