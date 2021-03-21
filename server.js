@@ -1,9 +1,8 @@
-const port = 5000;
+const port = process.env.PORT || 5000
 const cors = require('cors')
 const express = require('express')
 const app = express()
-const serve = require('https').Server(app)
-
+const serve = require('http').Server(app)
 const io = require('socket.io')(serve, {
     cors: {
       origin: 'https://speakup-heroku.herokuapp.com',
