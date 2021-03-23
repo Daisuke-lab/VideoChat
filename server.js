@@ -5,7 +5,7 @@ const app = express()
 const serve = require('http').Server(app)
 const io = require('socket.io')(serve, {
     cors: {
-      origin: 'https://speakup-heroku.herokuapp.com',
+      origin: ['https://speakup-heroku.herokuapp.com', 'localhost'],
       methods: ["GET", "POST"]
     }
   })
